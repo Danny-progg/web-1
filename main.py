@@ -8,7 +8,7 @@ serverPort = 8080
 class MyServer(BaseHTTPRequestHandler):
 
     def do_GET(self):
-        response = urllib.request.urlopen("catalog.html").read()
+        response = urllib.request.urlopen("https://raw.githubusercontent.com/Danny-progg/web-1/main/catalog.html").read()
 
         self.send_response(200)
         self.send_header("Content-type", "text/html")
